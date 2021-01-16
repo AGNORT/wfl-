@@ -1,0 +1,16 @@
+//冒泡排序，元素个数为n
+int i = 0;
+while(i < n - 1)
+{
+  int j = 0;
+  while(j < n - 1 - i)
+  {
+    if(s[j] > s[j+1])
+    {
+      int t = s[j];
+      s[j] = s[j + 1];
+      s[j+1] = t;
+    }
+  }
+  ++i;
+}
