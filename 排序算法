@@ -11,6 +11,28 @@ while(i < n - 1)
       s[j] = s[j + 1];
       s[j+1] = t;
     }
+    ++j;
+  }
+  ++i;
+}
+
+//选择排序，元素个数为n
+int i = 0, nMin = 0;
+while(i < n)
+{
+  int j = i; 
+  nMin = i;
+  while(j < n)
+  {
+    if(s[j] < s[nMin])
+      nMin = j;
+    ++j;
+  }
+  if(nMin != i)
+  {
+    int t = s[i];
+    s[i] = s[nMin];
+    s[nMin] = t;
   }
   ++i;
 }
